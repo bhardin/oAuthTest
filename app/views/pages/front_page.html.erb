@@ -1,1 +1,8 @@
-This is the First Page
+<% if current_user %>
+  <strong>Name:</strong> <%= current_user.name %><br/>
+  <strong>Provider:</strong> <%= current_user.provider %><br/>
+  <strong>uid:</strong> <%= current_user.uid %><br/>
+  <strong>OAuthToken:</strong> <%= current_user.OAuthToken %><br/>
+<% else %>
+  Please Log In.
+<% end %>

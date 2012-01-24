@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
+gem 'github-v3-api'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
