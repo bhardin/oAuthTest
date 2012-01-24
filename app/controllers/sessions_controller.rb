@@ -6,10 +6,4 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     redirect_to '/', :notice => "Signed in!"
   end
-
-  def error
-    #redirect_to '/', :notice => "Signed in!"
-    raise request.env["omniauth.auth"].to_yaml
-  end
-
 end

@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'omniauth-github'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
