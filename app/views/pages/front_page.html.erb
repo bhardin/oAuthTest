@@ -3,6 +3,30 @@
   <strong>Provider:</strong> <%= current_user.provider %><br/>
   <strong>uid:</strong> <%= current_user.uid %><br/>
   <strong>OAuthToken:</strong> <%= current_user.OAuthToken %><br/>
+
+  <h1>Repos</h1>
+
+  <ul class="repositories repo_list">
+  <% @repos.each do |p| %>
+    <li class="public source">
+      <ul class="repo-stats">
+        <li><%= p.language %></li>
+        <li class="watchers"><a href="#" title="Watchers"><%= p.watchers %></a></li>
+        <li class="forks"><a href="#" title="Forks">1</a></li>
+      </ul>
+
+      <h3>
+        <a href="/bhardin/oAuthTest"><%= p.name %></a>
+      </h3>
+
+      <div class="body">
+        <p class="description">
+          <%= p.description %>
+        </p>
+      </div>
+    </li>
+      <% end %>
+  </ul>
 <% else %>
   Please Log In.
 <% end %>
